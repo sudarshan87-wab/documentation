@@ -2,20 +2,13 @@
 Chapter 5: Finally, Some UI To Play With
 ========================================
 
-Now that we've created our new :doc:`model <03_basicmodel>` and its
-corresponding :doc:`access rights <04_securityintro>`, it is time to
-interact with the user interface.
-
-At the end of this chapter, we will have created a couple of menus in order to access a default list
-and form view.
-
 Data Files (XML)
 ================
 
 **Reference**: the documentation related to this topic can be found in
 :ref:`reference/data`.
 
-In :doc:`04_securityintro`, we added data through a CSV file. The CSV
+In 04_securityintro, we added data through a CSV file. The CSV
 format is convenient when the data to load has a simple format. When the format is more complex
 (e.g. load the structure of a view or an email template), we use the XML format. For example,
 this
