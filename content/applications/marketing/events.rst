@@ -33,6 +33,16 @@ be used to improve decision-making and event-planning.
 
       Expedite the event-creation process with event templates.
 
+   .. card:: Talks, proposals, and agenda
+      :target: events/track_manage_talks
+
+      View talks, agendas, and propose a talk.
+
+   .. card:: Event Tracks
+      :target: events/event_tracks
+
+      Learn how to create, track, and manage event tracks with Odoo.
+
 Events dashboard
 ================
 
@@ -202,3 +212,10 @@ event-creation process.
    events/sell_tickets
    events/track_manage_talks
    events/event_templates
+<<<<<<< HEAD
+||||||| parent of c66a19f3d (temp)
+   events/event_booths
+=======
+   events/event_booths
+   events/event_tracks
+>>>>>>> c66a19f3d (temp)
