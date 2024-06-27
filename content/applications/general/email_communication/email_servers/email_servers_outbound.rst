@@ -16,7 +16,7 @@ Send emails with Odoo default configuration
 When Odoo online or SH is used, the sending and receiving of emails can be accomplished without any further configuration.
 
 When a database *mycompany* is created, the subdomain `*mycompany*.odoo.com`
-is used to send and receive emails. :ref:`The deliverability is optimized for this subdomain as it uses Odoo’s domain DNS configurations<email_domain/email_odoo_default>`.
+is used to send and receive emails. The deliverability is optimized for this subdomain as it uses Odoo’s domain DNS configurations.
 
 .. example::
    If the database subdomain’s is *mycompany*.odoo.com and all mailing configurations are the default’s one, all emails will be sent from `notification\@*mycompany*.odoo.com`.
@@ -47,7 +47,7 @@ On Odoo Online or Odoo SH, some configurations are mandatory in the custom domai
 .. warning::
    Most of the configuration will be done on the domain provider’s side, and it might require some configuration on the mail server itself. If the user doesn't have any IT knowledge or an IT person in the company, it’s advised to keep Odoo’s default configuration.
 
-The first step is to configure your SPF, DKIM to be compliant with Odoo’s mail server. In our documentation, it’s possible to find all the keys needed to configure the :ref:`SPF <email_domain/spf_compliant>` and :ref:`DKIM <email_domain/DKIM_compliant>` records.
+The first step is to configure your SPF, DKIM to be compliant with Odoo’s mail server. In our documentation, it’s possible to find all the keys needed to configure the :ref:`SPF <email_domain/spf>` and :ref:`DKIM <email_domain/DKIM_compliant>` records.
 
 Then the custom domain must be set as the alias domain of a company. Select the current company, then goto :menuselection:`Settings --> General Settings --> Discuss --> Alias domain`, and set your domain.
 
@@ -185,13 +185,17 @@ In our SaaS & SH infrastructure, our databases are started with our own SMTP ser
 
 .. _email_servers_outbound/custom_domain_external_outgoing_servers:
 
-Configure your custom domain to use it with your email server
--------------------------------------------------------------
+Configure a custom domain to use it with an email server
+--------------------------------------------------------
 
 Similar to the :ref:`previous chapter <email_servers_outbound/external_outgoing_servers_with_odoo_server>`, proper configuration might be needed to ensure that the custom email server is allowed to send emails using your custom domain. Please refer to your email server provider’s documentation to properly set up the relevant records (SPF, DKIM and DMARC). We added a list of the common providers :ref:`here <email_domain/mail_config_common_providers>`.
 
 .. note::
-   DNS configuration is only required when you use Odoo’s default mail server with your custom domain. If an external outgoing mail server is used, configuring the records as described in our :ref:`DNS configuration documentation <email_domain>` **will not have the desired effect**, as it is independent of Odoo when using your custom email server. Odoo does not allow the configuration of the Odoo's subdomain.
+   DNS configuration is only required when you use Odoo’s default mail server with your custom
+   domain. If an external outgoing mail server is used, configuring the records as described in the
+   :doc:`DNS configuration documentation <../email_domain>` **will not have the desired effect**,
+   as it is independent of Odoo when using your custom email server. Odoo does not allow the
+   configuration of the Odoo's subdomain.
 
 .. _email_servers_outbound/port_restriction:
 

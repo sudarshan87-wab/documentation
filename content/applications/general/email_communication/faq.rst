@@ -144,7 +144,7 @@ If the daily limit is reached:
   #. Which apps are installed?
   #. The bounce rate: the percentage of email addresses that did not receive emails because they
      were returned by a mail server on its way to the final recipient.
-  #. :ref:`Your company email aliases are correctly set up and use appropriate custom domains <email_servers_outbound/alias_domain>`. When using a custom domain, verify that :ref:`SPF <email_domain/spf_compliant>`, :ref:`DKIM <email_domain/DKIM_compliant>` and :ref:`DMARC <email_domain/DMARC_policy>` are correctly configured so that :ref:`Odoo's email servers are allowed to send emails on your custom domain's behalf <email_servers_outbound/_custom_domain_w_Odoo_MS>`.
+  #. :ref:`Your company email aliases are correctly set up and use appropriate custom domains <email_servers_outbound/alias_domain>`. When using a custom domain, verify that :ref:`SPF <email_domain/spf>`, :ref:`DKIM <email_domain/DKIM_compliant>` and :ref:`DMARC <email_domain/DMARC_policy>` are correctly configured so that :ref:`Odoo's email servers are allowed to send emails on your custom domain's behalf <email_servers_outbound/_custom_domain_w_Odoo_MS>`.
 
 - Use an external outgoing email server to be independent of Odoo's mail limit (refer to the
   corresponding :doc:`email documentation
@@ -208,9 +208,10 @@ If this is a recurring problem with the same client, or the same domain, do not 
 
 .. note::
    One of the most common reasons for an email failing to send with no error message is related to
-   :ref:`SPF <email_domain/spf_compliant>` and/or :ref:`DKIM
-   <email_domain/DKIM_compliant>` configuration. Also verify that that the implemented email
-   notification setup is adapted to the business needs. See also our :ref:`introduction <emails_servers>`.
+   :ref:`SPF <email_domain/spf>` and/or :ref:`DKIM <email_domain/DKIM_compliant>` configuration.
+   Also verify that that the implemented email notification setup is adapted to the business needs.
+   See also the :doc:`Communication in Odoo by email documentation <email_servers>` for more
+   information.
 
 .. _email_issues/execution_time_email:
 

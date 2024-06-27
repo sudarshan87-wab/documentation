@@ -203,7 +203,8 @@ This address must also match the `{mail.default.from}@{mail.catchall.domain}` ke
 system parameters.
 
 .. seealso::
-   For more information on the from filter visit: :ref: Our documentation on the From Filtering `email_servers_outbound/from_filtering`.
+   Visit the :ref:`From Filtering documentation <email_servers_outbound/from_filtering>` for more
+   information.
 
 .. note::
    The :guilabel:`System Parameters` can be accessed by activating :ref:`developer-mode` in the
@@ -244,7 +245,8 @@ so that only the user's email is sent from that server. In other words, only a u
 address that matches the set :guilabel:`FROM Filtering` is able to use this server.
 
 .. seealso::
-   For more information on the from filter visit :ref: this documentation <email_servers_outbound/from_filtering>`.
+   Visit the :ref:`From Filtering documentation <email_servers_outbound/from_filtering>` for more
+   information.
 
 A :ref:`fallback server <azure_oauth/notifications>` must be setup to allow for the sending of
 :guilabel:`notifications`. The :guilabel:`FROM Filtering` for this server should have the value of

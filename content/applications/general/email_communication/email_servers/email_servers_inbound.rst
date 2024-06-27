@@ -4,14 +4,13 @@
 Manage inbound messages
 =======================
 
-
 An inbound message is an email delivered to the Odoo database. Anyone can send
 an email to an email alias created in the database or reply to an email that
 was previously sent from the database, based on the Reply-to header.
 
 .. _emails_servers_inbound/mail_alias:
 
-Email Aliases
+Email aliases
 =============
 
 Model specific aliases
@@ -332,7 +331,7 @@ Mail gateway (only for On Premise databases)
 
 If you are on premise and the option chosen is either MX record, redirections or
 incoming mail server with the “Local Server” option, you will have to use
-the :ref:`Mail Gateway script <email_gateway>`.
+the :doc:`Mail Gateway script <../../../../administration/on_premise/email_gateway>`.
 
 Pay attention that going through this script requires **advanced technical and
 infrastructure knowledge**.

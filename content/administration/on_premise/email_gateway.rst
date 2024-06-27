@@ -1,5 +1,3 @@
-.. _email_gateway:
-
 =============
 Email gateway
 =============

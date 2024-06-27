@@ -1,8 +1,6 @@
 :show-content:
 :show-toc:
 
-.. _discuss_app:
-
 =======
 Discuss
 =======

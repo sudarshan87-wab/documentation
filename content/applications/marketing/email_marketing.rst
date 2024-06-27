@@ -1,7 +1,5 @@
 :show-content:
 
-.. _email_marketing:
-
 ===============
 Email Marketing
 ===============
