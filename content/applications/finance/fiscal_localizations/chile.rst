@@ -1252,6 +1252,9 @@ Configuration --> Settings`.
 
 Or manually in the reports by clicking on the :guilabel:`✏️ (pencil)` icon.
 
+.. important::
+   The report in Odoo covers the basic legal requirements as a first proposal for your final tax declaration.
+
 .. image:: chile/manual-ppm-f29-report.png
    :alt: Manual PPM for the Propuesta F29 Report.
    :align: center
