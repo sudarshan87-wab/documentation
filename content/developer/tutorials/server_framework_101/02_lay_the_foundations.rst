@@ -191,8 +191,8 @@ create a model with some fields to represent real estate properties and their ch
 
 Congrats, you have just defined the first model of our real estate app! However, the changes have
 not yet been applied to the database. To do so, you must add the `-u real_estate` argument to the
-server start-up command and restart the server. The :option:`-u <odoo-bin --update>` argument tells
-the server to update the specified modules at start-up.
+server start-up command and restart the server. The :option:`-u <odoo-bin --update>` argument
+instructs the server to update the specified modules at start-up.
 
 .. _tutorials/server_framework_101/inspect_sql_table:
 
@@ -312,7 +312,7 @@ XML data files
 --------------
 
 Fortunately, the server framework allows for a different approach: describe data operations in XML
-format in so-called **data files** that the server automatically load at start-up in sequential
+format in so-called **data files** that the server automatically loads at start-up in sequential
 order. This automates the process of populating the database, saving time and effort, and allows
 developers to include default data or configurations directly in their modules.
 
@@ -445,7 +445,7 @@ CSV data files
 
 In addition to XML data files, the server framework allows loading data files in CSV format. This
 format is often more convenient for describing records with simple field values belonging to the
-same model.
+same model. It also loads faster, making it the go-to format when performance matters most.
 
 .. seealso::
    :ref:`Reference documentation for CSV data files <reference/data/csvdatafiles>`

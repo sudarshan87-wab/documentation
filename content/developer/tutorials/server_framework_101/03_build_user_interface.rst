@@ -104,6 +104,8 @@ our real estate app! Click it to open the app and automatically trigger the firs
 sub-menu. If you referenced the `base.open_module_tree` action, you should now see a list of Odoo
 modules.
 
+.. _tutorials/server_framework_101/menuitem_shortcut:
+
 Use the `menuitem` shortcut
 ---------------------------
 
@@ -121,7 +123,8 @@ it simplifies the syntax and automatically handles some technical details for yo
    .. code-block:: xml
 
       <menuitem id="product.root_menu" name="Product" web_icon="product,static/description/product.png">
-          <menuitem id="product.products_menu" name="Products" sequence="10" action="product.view_products_action"/>
+          <menuitem id="product.all_products_menu" name="All Products" sequence="1" action="product.view_all_products_action"/>
+          <menuitem id="product.new_products_menu" name="New Products" sequence="2" action="product.view_new_products_action"/>
       </menuitem>
 
    .. note::
@@ -154,23 +157,23 @@ refactoring**!
               <menuitem
                   id="real_estate.properties_menu"
                   name="Properties"
-                  sequence="10"
+                  sequence="1"
                   action="base.open_module_tree"
               />
               <menuitem
                   id="real_estate.settings_menu"
                   name="Settings"
-                  sequence="20"
+                  sequence="2"
                   action="base.action_client_base_menu"
               />
           </menuitem>
 
       </odoo>
 
-.. _tutorials/server_framework_101/define_actions:
+.. _tutorials/server_framework_101/define_window_actions:
 
-Define actions
-==============
+Define window actions
+=====================
 
 **Actions** define what happens when a user interacts with the UI, such as clicking a menu item.
 They connect the user interface with the underlying business logic. There exist different types of
@@ -198,7 +201,7 @@ the `ir.actions.act_window` model whose key fields include:
    :doc:`Reference documentation for actions <../../reference/backend/actions>`
 
 .. example::
-   The example below defines an action to open existing products in either tree or form view.
+   The example below defines an action to open existing products in either list (tree) or form view.
 
    .. code-block:: xml
 
@@ -223,15 +226,14 @@ now is an action to assign to the menu item.
 .. exercise::
 
    #. Create and declare a new :file:`actions.xml` file at the root of the `real_estate` module.
-
-      .. tip::
-         Pay attention to the declaration order of data files in the manifest; you might introduce a
-         data operation that depends on another one.
-
-   #. Describe a new "Properties" action that opens `real.estate.property` records in tree and form
+   #. Describe a new "Properties" action that opens `real.estate.property` records in list and form
       views, and assign it to the "Properties" menu item. Be creative with the help text! For
       reference, the list of supported classes can be found in the `view.scss
       <{GITHUB_PATH}/addons/web/static/src/views/view.scss>`_ file.
+
+   .. tip::
+      Pay attention to the declaration order of data files in the manifest; you might introduce a
+      data operation that depends on another one.
 
 .. spoiler:: Solution
 
@@ -277,27 +279,25 @@ now is an action to assign to the menu item.
           action="real_estate.views_properties_action"
       />
 
-Clicking the "Properties" menu item now displays a tree view of the default properties we created
-earlier. As we specified in the action that both tree and form views were allowed, you can click any
+Clicking the "Properties" menu item now displays a list view of the default properties we created
+earlier. As we specified in the action that both list and form views were allowed, you can click any
 property record to display its form view. Delete all three records to see the help text you created.
 
-.. _tutorials/server_framework_101/create_views:
+.. _tutorials/server_framework_101/create_custom_views:
 
-Create views
-============
+Create custom views
+===================
 
 **Views** are the UI's building blocks, defining how model data is displayed on screen. They are
 structures written in XML that describe the layout and behavior of various UI components.
 
 Odoo supports different types of views, each serving a different purpose. The most common types
-include **tree views** for listing multiple records in a table-like format, **form views** for
+include **list views** for listing multiple records in a table-like format, **form views** for
 displaying and editing individual records, **kanban views** for presenting records in a card layout,
 and **search views** for defining search and filtering options.
 
-.. note::
-   For historical reasons, list views are called tree views in Odoo.
-
-In Odoo, views are records of the `ir.ui.view` model. Key fields include:
+In Odoo, views are records of the `ir.ui.view` model. Each view is associated with a specific model,
+determining which data it displays and interacts with. Key fields include:
 
 .. rst-class:: o-definition-list
 
@@ -308,17 +308,27 @@ In Odoo, views are records of the `ir.ui.view` model. Key fields include:
 `arch` (required)
    The view architecture as an XML string.
 
-.. seealso::
-   TODO
-   .. :doc:`Reference documentation for views <../../reference/backend/actions>`
+The `arch` field holds the view's XML architecture, which is composed of a root element determining
+the type of the view, and various inner components that depend on the view type. The root element
+(e.g., `tree`, `form`, `search`) defines the view type, while the inner elements describe the
+structure and content of the view. These components can be structural (like `sheet` that makes the
+layout responsive, or `group` that defines column layouts) or semantic (like `field` that displays
+field labels and values).
 
-.. todo:: comment examples
+.. seealso::
+   - :doc:`Reference documentation for view records <../../reference/user_interface/view_records>`
+   - :doc:`Reference documentation for view architectures
+     <../../reference/user_interface/view_architectures>`
 
 .. example::
+   The following examples demonstrate how to define simple list, form and search views for the
+   `product` model.
+
    .. code-block:: xml
+      :caption: A list view for `product`
 
       <record id="product_list" model="ir.ui.view">
-          <field name="name">product.list</field>
+          <field name="name">Product List</field>
           <field name="model">product</field>
           <field name="arch" type="xml">
               <tree>
@@ -330,9 +340,10 @@ In Odoo, views are records of the `ir.ui.view` model. Key fields include:
       </record>
 
    .. code-block:: xml
+      :caption: A form view for `product`
 
       <record id="product_form" model="ir.ui.view">
-          <field name="name">product.form</field>
+          <field name="name">Product Form</field>
           <field name="model">product</field>
           <field name="arch" type="xml">
               <form>
@@ -348,12 +359,137 @@ In Odoo, views are records of the `ir.ui.view` model. Key fields include:
           </field>
       </record>
 
-.. todo:: If you deleted the default property records earlier, restart the server to load them again.
-.. todo:: link to https://odoo.com/documentation/developer/reference/user_interface/view_records.html
-.. todo:: link to https://odoo.com/documentation/developer/reference/user_interface/view_architectures.html
-.. todo:: add exercise to create a list view of the real_estate_property model
-.. todo:: add exercise to create a form view of the real_estate_property model
-.. todo:: add the solution
+   .. code-block:: xml
+      :caption: A search view for `product`
+
+      <record id="product_search" model="ir.ui.view">
+          <field name="name">Product Search</field>
+          <field name="model">product</field>
+          <field name="arch" type="xml">
+              <search>
+                  <field name="name"/>
+                  <field name="description"/>
+              </search>
+          </field>
+      </record>
+
+   .. note::
+
+      - The XML structure differs between view types.
+      - For historical reasons, the root element of list views is `tree`.
+      - The `description` field is omitted from the list view because it wouldn't fit visually.
+
+In :ref:`the previous section <tutorials/server_framework_101/define_window_actions>`, we defined
+the `view_mode` of our action to display `real.estate.property` records in list and form view.
+Although we haven't created the corresponding views yet, the server framework had our back and
+automatically provided generic views. The generic list and form views were hard to miss, but a
+generic search view was also provided; when searching for properties, you are in fact searching on
+property names because it's the only field of the generic view.
+
+However convenient, we should almost never rely on these generic views in business applications.
+They are too incomplete and badly structured. Let's create our own custom views for a better
+:abbr:`UX (User experience)`.
+
+.. _tutorials/server_framework_101/list_view:
+
+List view
+---------
+
+For a start, the list view could use more fields than just the name.
+
+.. exercise::
+
+   #. Create a new :file:`real_estate_property_views.xml` file at the root of the `real_estate`
+      module.
+   #. Create a custom list view to display the following fields of the `real.estate.property` model
+      in the given order: name, availability date, type, selling price, floor area, number of
+      bedrooms, presence of a garden, and presence of a garage.
+   #. Make the visibility of the floor area and all following fields optional so that only the floor
+      area is visible by default, while the remaining fields are hidden by default and must be
+      displayed by accessing the view's column selector (:icon:`oi-settings-adjust` button).
+   #. After restarting the server to load the new data, refresh the browser to see the result.
+
+   .. tip::
+      Rely on the :ref:`reference documentation for field elements in list views
+      <reference/view_architectures/list/field>`.
+
+.. spoiler:: Solution
+
+   .. code-block:: python
+      :caption: `__manifest__.py`
+      :emphasize-lines: 6
+
+      'data': [
+          'actions.xml',
+          'ir.model.access.csv',
+          'menus.xml',  # Depends on `actions.xml`
+          'real_estate_property_data.xml',
+          'real_estate_property_views.xml',
+      ],
+
+   .. code-block:: xml
+      :caption: `real_estate_property_views.xml`
+
+      <?xml version="1.0" encoding="utf-8"?>
+      <odoo>
+
+          <record id="real_estate.property_list" model="ir.ui.view">
+              <field name="name">Property List</field>
+              <field name="model">real.estate.property</field>
+              <field name="arch" type="xml">
+                  <tree>
+                      <field name="name"/>
+                      <field name="availability_date"/>
+                      <field name="type"/>
+                      <field name="selling_price"/>
+                      <field name="floor_area" optional="show"/>
+                      <field name="bedrooms" optional="hide"/>
+                      <field name="has_garden" optional="hide"/>
+                      <field name="has_garage" optional="hide"/>
+                  </tree>
+              </field>
+          </record>
+
+      </odoo>
+
+.. _tutorials/server_framework_101/form_view:
+
+Form view
+---------
+
+.. exercise::
+
+   #. todo
+
+   .. tip::
+      - Rely on the :ref:`reference documentation for field elements in form views
+        <reference/view_architectures/form/field>`.
+      - Add the :option:`--dev xml <odoo-bin --dev>` argument to the server start-up command to
+        instruct the server to load records defined in XML from your filesystem rather than from the
+        database. This avoids restarting the server after modifying an XML file.
+
+.. _tutorials/server_framework_101/search_view:
+
+Search view
+-----------
+
+Search views differ slightly from list and form views in that they don't display record data on
+screen. Instead, their architecture determines which fields can be searched on, and which filters
+and group-by options are available by default in the search menu.
+
+The generic search view only allows searching on property names. Let's allow searching on some other
+fields.
+
+.. todo:: introduce search domains
+.. todo:: exercise to add filters and groupbys
+
+
+
+
+.. todo:: default = today + 3 months for availability date
+.. todo:: copy=False on some fields
+.. todo:: add active field + add `delete` root element attrib to list and form views
+.. todo:: add state field (move later?)
 
 ----
 
