@@ -8,7 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2024-06-21 15:46+0000\n"
+||||||| parent of d13e8fb41 (temp)
+"POT-Creation-Date: 2024-06-21 08:31+0000\n"
+=======
+"POT-Creation-Date: 2024-07-23 07:52+0000\n"
+>>>>>>> d13e8fb41 (temp)
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9006,100 +9012,288 @@ msgstr ""
 msgid "In the Odoo *Barcode* app, users can only view inventory counts that are assigned to **them**, and are scheduled for **today** or **earlier**."
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:235
 msgid ":doc:`cycle_counts`"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:29
+msgid "Follow the website's steps to complete registration, and sign up for shipping services."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:29
+msgid "Follow the website's steps to complete registration, and sign up for shipping services. Doing so submits a request to enter a contractual business relationship between the company and Bpost."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:3
 msgid "Create a second warehouse"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:31
+msgid "After completing the setup, get the Bpost account ID and passphrase, by navigating to the :guilabel:`Shipping Manager` menu item."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:33
+msgid "Odoo **cannot** be integrated with `non-business Bpost <https://bpost.freshdesk.com/support/solutions/articles/174847-account-id-and-passphrase>`_ accounts."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:37
+msgid "After completing the setup, get the Bpost account ID and passphrase, by navigating to the :guilabel:`Shipping Manager` menu item."
+>>>>>>> d13e8fb41 (temp)
+msgstr ""
+
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:5
 msgid "A *warehouse* is a physical building or space where items are stored. In Odoo, it is possible to set up multiple warehouses and transfer stored items between them."
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:36
+msgid "On the :guilabel:`Shipping Manager` page, go to the :guilabel:`Admin` tab, then the :guilabel:`General Settings` tab, to find the :guilabel:`Account ID` and :guilabel:`Passphrase` needed to configure Odoo's shipping method."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:42
+msgid "On the :guilabel:`Shipping Manager` page, go to the :guilabel:`Admin` tab, then the :guilabel:`General Settings` tab, to find the :guilabel:`Account ID` and :guilabel:`Passphrase` needed to configure Odoo's shipping method."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:8
 msgid "By default, the Odoo platform has one warehouse that is already configured, with the address set as the company's address. To create a second warehouse, select :menuselection:`Configuration --> Warehouses`, then click :guilabel:`Create` and configure the form as follows:"
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:12
 msgid ":guilabel:`Warehouse`: the full name of the warehouse"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:45
+msgid "Configure Bpost shipping method"
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:51
+msgid "Configure Bpost shipping method"
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:13
 msgid ":guilabel:`Short Name`: the abbreviated code by which the warehouse is referred to; the short name for the default warehouse in Odoo is **WH**"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:47
+msgid "With those necessary credentials, configure the Bpost shipping method in Odoo by going to :menuselection:`Inventory app --> Configuration --> Shipping Methods`."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:53
+msgid "With those necessary credentials, configure the Bpost shipping method in Odoo by going to :menuselection:`Inventory app --> Configuration --> Shipping Methods`."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:15
 msgid ":guilabel:`Company`: the company that owns the warehouse; this can be set as the company that owns the Odoo database or the company of a customer or vendor"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:50
+msgid "On the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:56
+msgid "On the :guilabel:`Shipping Methods` page, click :guilabel:`Create`."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:17
 msgid ":guilabel:`Address`: the address where the warehouse is located"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:52
+msgid "In the :guilabel:`Provider` field, select :guilabel:`Bpost` from the drop-down menu. Doing so reveals the :guilabel:`Bpost Configuration` tab at the bottom of the form, where the Bpost credentials can be entered."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:58
+msgid "In the :guilabel:`Provider` field, select :guilabel:`Bpost` from the drop-down menu. Doing so reveals the :guilabel:`Bpost Configuration` tab at the bottom of the form, where the Bpost credentials can be entered."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:20
 msgid "The options below will only appear if the :guilabel:`Multi-Step Routes` checkbox is enabled in :menuselection:`Configuration --> Settings` under the :guilabel:`Warehouse` heading. For more information about routes and how they work in Odoo, see :ref:`Using Routes and Pull/Push Rules <use-routes>`."
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:56
+msgid "For details on configuring the other fields on the shipping method, such as :guilabel:`Delivery Product`, refer to the :doc:`Configure third-party carrier <third_party_shipper>` documentation."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:62
+msgid "For details on configuring the other fields on the shipping method, such as :guilabel:`Delivery Product`, refer to the :doc:`Configure third-party carrier <third_party_shipper>` documentation."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:25
 msgid ":guilabel:`Incoming/Outgoing Shipments`: select the routes that incoming and outgoing shipments should follow"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:60
+msgid "To generate Bpost :doc:`shipping labels <../operation/labels>` through Odoo, ensure the :guilabel:`Integration Level` option is set to :guilabel:`Get Rate and Create Shipment`."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:66
+msgid "To generate Bpost :doc:`shipping labels <../operation/labels>` through Odoo, ensure the :guilabel:`Integration Level` option is set to :guilabel:`Get Rate and Create Shipment`."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:27
 msgid ":guilabel:`Resupply Subcontractors`: allow subcontractors to be resupplied from this warehouse"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:63
+msgid "In the :guilabel:`Bpost Configuration` tab, complete the following fields:"
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:69
+msgid "In the :guilabel:`Bpost Configuration` tab, complete the following fields:"
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:28
 msgid ":guilabel:`Manufacture to Resupply`: allow for items to be manufactured in this warehouse"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:65
+msgid ":guilabel:`Bpost Account Number` (required field): enter the company's unique :ref:`account ID <inventory/shipping/bpost-account>` from the Bpost website."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:71
+msgid ":guilabel:`Bpost Account Number` (required field): enter the company's unique :ref:`account ID <inventory/shipping/bpost-account>` from the Bpost website."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:29
 msgid ":guilabel:`Manufacture`: select the route that should be followed when manufacturing goods inside the warehouse"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:67
+msgid ":guilabel:`Passphrase` (required field): enter the :ref:`passphrase <inventory/shipping/bpost-account>` from the Bpost website."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:73
+msgid ":guilabel:`Passphrase` (required field): enter the :ref:`passphrase <inventory/shipping/bpost-account>` from the Bpost website."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:31
 msgid ":guilabel:`Buy to Resupply`: check the box to allow for purchased products to be delivered to the warehouse"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:69
+msgid ":guilabel:`Bpost Delivery Nature`: select either :guilabel:`Domestic` or :guilabel:`International` shipping services. Choosing :guilabel:`Domestic` shows the :guilabel:`Options` section, while :guilabel:`International` enables the :guilabel:`Bpost Shipment Type` and :guilabel:`Bpost Parcel Return Instructions` fields."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:75
+msgid ":guilabel:`Bpost Delivery Nature`: select either :guilabel:`Domestic` or :guilabel:`International` shipping services. Choosing :guilabel:`Domestic` shows the :guilabel:`Options` section, while :guilabel:`International` enables the :guilabel:`Bpost Shipment Type` and :guilabel:`Bpost Parcel Return Instructions` fields."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:33
 msgid ":guilabel:`Resupply From`: select warehouses that can be used to resupply the warehouse being created"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:73
+msgid ":guilabel:`Bpost Package Type`: select the type of shipping service from the drop-down menu."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:79
+msgid ":guilabel:`Bpost Package Type`: select the type of shipping service from the drop-down menu."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:-1
 msgid "A filled out form for creating a new warehouse."
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:75
+msgid "For `domestic delivery <https://help.shipmondo.com/en/articles/6092265-bpost-belgium-parcel-types-and-requirements>`_, the options are: :guilabel:`bpack 24h Pro`, :guilabel:`bpack 24h business`, or :guilabel:`bpack Bus`."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:81
+msgid "For `domestic delivery <https://help.shipmondo.com/en/articles/6092265-bpost-belgium-parcel-types-and-requirements>`_, the options are: :guilabel:`bpack 24h Pro`, :guilabel:`bpack 24h business`, or :guilabel:`bpack Bus`."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:41
 msgid "Creating a second warehouse will automatically enable the *Storage Locations* setting, which allows location tracking of products within a warehouse. To toggle this setting, navigate to :menuselection:`Configuration --> Settings` and click the checkbox under the :guilabel:`Warehouse` heading."
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:80
+msgid "For `international delivery <https://www.bpost.be/en/business-parcels-send/international>`_, the options are: :guilabel:`bpack World Express Pro`, :guilabel:`bpack World Business`, or :guilabel:`bpack Europe Business`."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:86
+msgid "For `international delivery <https://www.bpost.be/en/business-parcels-send/international>`_, the options are: :guilabel:`bpack World Express Pro`, :guilabel:`bpack World Business`, or :guilabel:`bpack Europe Business`."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:46
 msgid "After filling out the form, click :guilabel:`Save` and the new warehouse will be created."
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:83
+msgid ":guilabel:`Bpost Shipment Type` (required field): for international deliveries, declare the type of goods in the package as :guilabel:`SAMPLE`, :guilabel:`GIFT`, :guilabel:`GOODS`, :guilabel:`DOCUMENTS`, or :guilabel:`OTHER`."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:89
+msgid ":guilabel:`Bpost Shipment Type` (required field): for international deliveries, declare the type of goods in the package as :guilabel:`SAMPLE`, :guilabel:`GIFT`, :guilabel:`GOODS`, :guilabel:`DOCUMENTS`, or :guilabel:`OTHER`."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:49
 msgid "Add inventory to a new warehouse"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:86
+msgid ":guilabel:`Bpost Parcel Return Address`: return address when an international shipment fails to deliver. Select from the drop-down menu: :guilabel:`Destroy`, :guilabel:`Return to sender by air`, or :guilabel:`Return to sender by road`."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:92
+msgid ":guilabel:`Bpost Parcel Return Address`: return address when an international shipment fails to deliver. Select from the drop-down menu: :guilabel:`Destroy`, :guilabel:`Return to sender by air`, or :guilabel:`Return to sender by road`."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:51
 msgid "If a new warehouse is created that has existing inventory in it, the inventory counts should be added to Odoo so that the stock listed in the Odoo database reflects what is in the physical warehouse. To add inventory to a new warehouse, navigate to :menuselection:`Inventory --> Operations --> Inventory Adjustments`, and then click :guilabel:`Create`. The inventory adjustment form can then be filled out as follows:"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:89
+msgid ":guilabel:`Label Type`: choose :guilabel:`A6` or :guilabel:`A4` label sizes from the drop-down menu."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:95
+msgid ":guilabel:`Label Type`: choose :guilabel:`A6` or :guilabel:`A4` label sizes from the drop-down menu."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:57
 msgid ":guilabel:`Inventory Reference`: the name or code that the inventory adjustment can be referred to by"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:91
+msgid ":guilabel:`Label Format`: choose :guilabel:`PDF` or :guilabel:`PNG` from the drop-down menu."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:97
+msgid ":guilabel:`Label Format`: choose :guilabel:`PDF` or :guilabel:`PNG` from the drop-down menu."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:59
 msgid ":guilabel:`Locations`: the location(s) where the inventory is stored; include the new warehouse and any locations within it that inventory will be added to"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:93
+msgid "For domestic deliveries, these features are available in the :guilabel:`Options` section:"
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:99
+msgid "For domestic deliveries, these features are available in the :guilabel:`Options` section:"
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:61
 msgid ":guilabel:`Products`: include all products that will be added to inventory or leave blank to select any product during the next step"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:95
+msgid "Enable the :guilabel:`Delivery on Saturday` feature to include Saturdays as possible delivery dates. Depending on the :guilabel:`Bpost Package Type` selected, this option might incur additional costs to the company."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:101
+msgid "Enable the :guilabel:`Delivery on Saturday` feature to include Saturdays as possible delivery dates. Depending on the :guilabel:`Bpost Package Type` selected, this option might incur additional costs to the company."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
+<<<<<<< HEAD
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:63
 msgid ":guilabel:`Include Exhausted Products`: include products with a quantity of zero; does not affect inventory adjustments for new warehouses since they have no existing inventory"
+||||||| parent of d13e8fb41 (temp)
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:98
+msgid "Enable the :guilabel:`Generate Return Label` feature to automatically print a return label upon validating the delivery order."
+=======
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:104
+msgid "Enable the :guilabel:`Generate Return Label` feature to automatically print a return label upon validating the delivery order."
+>>>>>>> d13e8fb41 (temp)
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/create_a_second_warehouse.rst:65
